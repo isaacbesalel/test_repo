@@ -24,7 +24,7 @@ deploy:
     region: eu-central-1
     bucket: isaacbucket123
     local_dir: localDir
-    upload-dir: glue
+    upload-dir: testfolder
     skip_cleanup: true
    - echo "On this machine \$LANG=$LANG"
  
