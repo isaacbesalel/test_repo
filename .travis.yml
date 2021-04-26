@@ -6,33 +6,15 @@ python: 3.7
 before_install:
   - sudo apt-get update
   - sudo apt-get install python3
-  - pip install --upgrade pip setuptools
-
-#install:
-  #- pip install -r requirements.txt
-
-script:
-  - echo "Script is getting started"
-  - echo "On this machine \$LANG=$LANG"
- 
-before_deploy: "echo 'ready for s3 Deployment?'"
 
 deploy:
     provider: s3
     access_key_id: $Access_Key_ID 
-    secret_access_key: $Secret_Access_Key
+    secret_access_key: $Secret_Key
     region: eu-central-1
     bucket: isaacbucket123
     local_dir: localDir
     upload-dir: testfolder
     skip_cleanup: true
-   - echo "On this machine \$LANG=$LANG"
- 
-after_deploy: "echo 'Done with s3 files deployment?'"
-
-branches:
-  only:
-    - master
-
-notifications:
-  email: false
+    on:
+      branch: main
