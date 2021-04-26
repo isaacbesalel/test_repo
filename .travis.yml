@@ -19,10 +19,10 @@ before_deploy: "echo 'ready for s3 Deployment?'"
 
 deploy:
     provider: s3
-    access_key_id: $AWS_ACCESS_KEY_ID 
-    secret_access_key: $AWS_SECRET_ACCESS_KEY
-    region: $AWS_DEFAULT_REGION
-    bucket: $s3Bucket 
+    access_key_id: $Access_Key_ID 
+    secret_access_key: $Secret_Access_Key
+    region: eu-central-1
+    bucket: isaacbucket123
     local_dir: PytF
     upload-dir: glue
     skip_cleanup: true
